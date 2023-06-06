@@ -14,7 +14,7 @@ public class Film {
     private transient int duration;
 
 
-    public Film(FilmDTO.CreateFilmDTO filmDTO){
+    public Film(FilmDTO.CreateFilmDTO filmDTO) {
         this.name = filmDTO.getName();
         this.description = filmDTO.getDescription();
         this.releaseDate = filmDTO.getReleaseDate();
