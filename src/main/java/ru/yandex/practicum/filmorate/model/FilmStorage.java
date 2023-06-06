@@ -12,7 +12,7 @@ public class FilmStorage {
     @Setter
     private HashMap<Integer, Film> films = new HashMap<>();
 
-    public Film createFilm(FilmDTO.CreateFilmDTO filmDTO){
+    public Film createFilm(FilmDTO.CreateFilmDTO filmDTO) {
         Film film = new Film(filmDTO);
         film.setId(++id);
         films.put(film.getId(), film);
