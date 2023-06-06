@@ -15,7 +15,7 @@ public class UserDTO {
     }
 
     @Data
-    public static class UpdateUserDTO extends CreateUserDTO{
+    public static class UpdateUserDTO extends CreateUserDTO {
         private int id;
     }
 }
