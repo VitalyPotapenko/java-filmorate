@@ -12,7 +12,7 @@ public class User {
     private transient String name;
     private transient LocalDate birthday;
 
-    public User(UserDTO.CreateUserDTO userDTO){
+    public User(UserDTO.CreateUserDTO userDTO) {
         this.email = userDTO.getEmail();
         this.login = userDTO.getLogin();
         this.name = userDTO.getName();
