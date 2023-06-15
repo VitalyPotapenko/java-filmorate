@@ -43,6 +43,7 @@ public class UserControllerTest {
     private String testUserBirthday = "1970-01-01";
     private UserDTO.CreateUserDTO createUserDto;
     private DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
     @BeforeEach
     void init() {
         createUserDto = new UserDTO.CreateUserDTO();
@@ -128,7 +129,7 @@ public class UserControllerTest {
     }
 
     @Test
-    void test_CreateUser_IfUserNameIsEmptyItShouldGetReplacedByLogin() throws Exception{
+    void test_CreateUser_IfUserNameIsEmptyItShouldGetReplacedByLogin() throws Exception {
         //given
         createUserDto.setName("");
         UserDTO.CreateUserDTO resultCreateUserDto = new UserDTO.CreateUserDTO();
@@ -147,6 +148,7 @@ public class UserControllerTest {
                 .andExpect(jsonPath("$.name").value(testUserLogin))
                 .andExpect((jsonPath("$.login").value(testUserLogin)));
     }
+
     @Test
     void test_UpdateUser_HappyCase() throws Exception {
         //given
