@@ -21,4 +21,6 @@ public class Film {
         this.duration = filmDTO.getDuration();
     }
 
+    public Film() {
+    }
 }
