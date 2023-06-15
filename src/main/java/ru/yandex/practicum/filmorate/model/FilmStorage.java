@@ -21,7 +21,7 @@ public class FilmStorage {
         return film;
     }
 
-    public Film updateFilm(FilmDTO.UpdateFilmDTO filmDTO){
+    public Film updateFilm(FilmDTO.UpdateFilmDTO filmDTO) {
         int id = filmDTO.getId();
         if (films.containsKey(id)) {
             Film film = films.get(id);
